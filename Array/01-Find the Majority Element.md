@@ -102,7 +102,7 @@ Divide the array into 3 Parts.
 <----N/3----><----N/3----><----N/3-->
 <--N/3 + 1 -><--N/3 + 1 -><--N/3 -2->
 
-We can find 2 elements whose count will be more than two time in the array.
+possibly We can find 2 elements whose count will be majority.
 ```
 
 ```
