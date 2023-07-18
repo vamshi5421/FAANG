@@ -104,3 +104,54 @@ Divide the array into 3 Parts.
 
 We can find 2 elements whose count will be more than two time in the array.
 ```
+
+```
+class Solution {
+public:
+    vector<int> majorityElement(vector<int>& nums) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); 
+        int e1 =nums[0],e2=0;
+        int e1c =1, e2c=0;
+        
+        for(int i=1; i<nums.size();i++){
+            if(nums[i] == e1){
+                e1c++;
+            }
+            else if(nums[i] == e2){
+                e2c++;
+            }
+            else if(e1c == 0){
+                e1 = nums[i];
+                e1c = 1;
+            }
+            else if(e2c == 0){
+                e2 = nums[i];
+                e2c = 1;
+            }
+            else{
+                e1c--;
+                e2c--;
+            }
+        }
+        e1c = e2c = 0;
+        for(int i=0; i< nums.size();i++){
+            if(nums[i] == e1){
+                e1c++;
+            }
+            else if(nums[i] == e2){
+                e2c++;
+            }
+        }
+        vector<int> ans;
+        if(e1c > nums.size()/3){
+            ans.push_back(e1);
+        }
+        if(e2c > nums.size()/3){
+            ans.push_back(e2);
+        }
+        
+        return ans;
+    }
+};
+```
