@@ -1,4 +1,5 @@
-nohup.out
-.vscode
+### VisualStudioCode ###
+.vscode/
 
-*/nohup.out
+nohup.out
+
